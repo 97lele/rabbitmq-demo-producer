@@ -1,0 +1,20 @@
+spring:
+  rabbitmq:
+    password: guest
+    username: guest
+    addresses: 192.168.99.100:5672
+    #开启消息确认
+    publisher-returns: true
+    publisher-confirms: true
+    template:
+      mandatory: true
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 123456
+    url: jdbc:mysql://127.0.0.1/mptest?characterEncoding=UTF-8&useSSL=false&serverTimezone=Asia/Shanghai
+server:
+  port: 8081
+
+elk:
+ index: message
